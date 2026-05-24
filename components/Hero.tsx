@@ -53,14 +53,13 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[4.5rem]">
-          Walk Through It<br className="hidden sm:block" /> Before It&apos;s Built
+          Close more bookings, faster.
         </h1>
 
         {/* Subheadline */}
         <p className="mt-6 max-w-xl text-base leading-relaxed text-[#a3a3a3] sm:text-lg md:text-xl">
-          Interactive 3D and VR walkthroughs that help your clients sell faster.
-          <br className="hidden md:block" />
-          Browser-based, no app needed.
+          Interactive 3D walkthroughs let buyers experience your project before
+          construction begins — so they call you ready to book.
         </p>
 
         {/* CTA */}
