@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import ProjectTypes from '@/components/ProjectTypes'
 import ValueProps from '@/components/ValueProps'
 import BeforeAfter from '@/components/BeforeAfter'
 import HowItWorks from '@/components/HowItWorks'
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ProjectTypes />
         <ValueProps />
         <BeforeAfter />
         <HowItWorks />

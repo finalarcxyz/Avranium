@@ -18,7 +18,7 @@ export default function Hero() {
     if (!video) return
     /*
      * Explicit .play() call handles Safari's stricter autoplay policy.
-     * The autoPlay / muted / playsInline attributes are still required —
+     * The autoPlay / muted / playsInline attributes are still required;
      * they're the signals the browser checks before we call play().
      * We swallow the rejection: if autoplay is blocked the video simply
      * stays on its first frame, which is an acceptable fallback.
@@ -36,7 +36,7 @@ export default function Hero() {
         autoPlay
         muted
         loop
-        playsInline        // critical for iOS Safari — prevents fullscreen hijack
+        playsInline        // critical for iOS Safari, prevents fullscreen hijack
         preload="auto"     // start buffering immediately for smooth autoplay
         className="absolute inset-0 z-0 h-full w-full object-cover"
         aria-hidden="true"
@@ -59,7 +59,7 @@ export default function Hero() {
         {/* Subheadline */}
         <p className="mt-6 max-w-xl text-base leading-relaxed text-[#a3a3a3] sm:text-lg md:text-xl">
           Interactive 3D walkthroughs let buyers experience your project before
-          construction begins — so they call you ready to book.
+          construction begins, so they call you ready to book.
         </p>
 
         {/* CTA */}

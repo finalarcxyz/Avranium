@@ -1,4 +1,4 @@
-/* Server Component — no interactivity needed */
+/* Server Component */
 
 type Person = {
   initials: string
@@ -20,7 +20,7 @@ const TEAM: Person[] = [
     initials: 'NS',
     name: 'Nakul Saxena',
     role: 'Technical Founder',
-    bio: 'Nakul brings game optimisation expertise into architectural visualisation — the rare skill that makes a 40 million polygon building run smoothly on any browser or VR headset.',
+    bio: 'Nakul brings game optimisation expertise into architectural visualisation, the rare skill that makes a 40 million polygon building run smoothly on any browser or VR headset.',
     linkedinHref: '#',
   },
 ]

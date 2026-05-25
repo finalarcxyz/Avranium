@@ -92,18 +92,18 @@ function ShowcaseRow({ showcase }: { showcase: Showcase }) {
       {/* ── Media pair ─────────────────────────────────────────── */}
       <div className="grid grid-cols-2 gap-3 md:gap-5">
 
-        {/* Before — static JPG */}
+        {/* Before: static JPG */}
         <div className={`relative ${MEDIA_HEIGHT} overflow-hidden rounded-xl`}>
           <Image
             src={showcase.image}
-            alt={`${showcase.name} — static render`}
+            alt={`${showcase.name} static render`}
             fill
             className="object-cover"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 480px"
           />
         </div>
 
-        {/* After — IntersectionObserver-driven video */}
+        {/* After: IntersectionObserver-driven video */}
         <div className={`${MEDIA_HEIGHT} overflow-hidden rounded-xl`}>
           <video
             ref={videoRef}

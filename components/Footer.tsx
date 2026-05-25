@@ -1,4 +1,4 @@
-/* Server Component — no interactivity needed */
+/* Server Component */
 
 const WA_HREF =
   'https://wa.me/919337925654?text=Hi%2C%20I%27m%20interested%20in%20a%203D%20walkthrough%20for%20my%20project'

@@ -1,4 +1,4 @@
-/* Server Component — no interactivity needed */
+/* Server Component */
 
 type Step = {
   number: string
@@ -23,7 +23,7 @@ const STEPS: Step[] = [
     number: '03',
     title: 'Share One Link',
     description:
-      'Browser, mobile, and VR ready. Your clients walk through it instantly — no app needed.',
+      'Browser, mobile, and VR ready. Your clients walk through it instantly. No app needed.',
   },
 ]
 
@@ -34,7 +34,7 @@ const STEPS: Step[] = [
  *   Step 3  →  md:pl-12          (space after divider, flush right)
  *
  * This keeps "01" aligned with the section headline on the left
- * and "03" flush with the right edge — avoiding unnecessary indentation
+ * and "03" flush with the right edge, avoiding unnecessary indentation
  * at the outer margins.
  */
 const COL_PADDING = ['md:pr-12', 'md:px-12', 'md:pl-12'] as const
@@ -57,7 +57,7 @@ export default function HowItWorks() {
         {/* ── Steps row ─────────────────────────────────────────── */}
         {/*
          * divide-x draws a 1px border on the left side of every child
-         * except the first — giving us the two vertical dividers between
+         * except the first, giving us the two vertical dividers between
          * steps at md+ breakpoints without any extra markup.
          * On mobile the flex direction flips to column so divide-x
          * produces no visible borders (they're 0-height in column flow).

@@ -187,12 +187,12 @@ export default function Pricing() {
                   {tier.name}
                 </p>
 
-                {/* Price — INR */}
+                {/* Price: INR */}
                 <p className={`mt-2 text-2xl font-bold tracking-tight ${hl ? 'text-white' : 'text-black'}`}>
                   {price.inr}
                 </p>
 
-                {/* Price — USD approx */}
+                {/* Price: USD approx */}
                 <p className={`text-sm ${hl ? 'text-white/50' : 'text-[#6e6e73]'}`}>
                   {price.usd} USD approx*
                 </p>
@@ -244,7 +244,7 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                {/* Spacer — pushes CTA to the bottom of every card */}
+                {/* Spacer: pushes CTA to the bottom of every card */}
                 <div className="flex-1" />
 
                 {/* CTA button */}

@@ -107,47 +107,63 @@ export default function ValueProps() {
 
         {/* ── Headline ──────────────────────────────────────────── */}
         <h2 className="mx-auto mt-4 max-w-3xl text-center text-4xl font-bold leading-tight tracking-tight text-black sm:text-5xl">
-          Help your clients sell before the building exists
+          Give buyers certainty before construction begins.
         </h2>
 
         {/* ── Subheadline ───────────────────────────────────────── */}
         <p className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-[#6e6e73]">
-          One browser link. No app. No site visit.{' '}
-          Buyers walk through the space from anywhere.
+          One browser link. No app. Buyers experience the space from anywhere.
         </p>
 
         {/* ── Cards ─────────────────────────────────────────────── */}
         {/*
-         * flex-wrap + justify-center handles the 3-2 grid:
-         *   lg: w-[calc(33.333%-16px)] → exactly 3 cards fill row 1,
-         *       the 2 remaining cards are centered in row 2.
-         *   sm: w-[calc(50%-12px)] → 2-column layout
-         *   default: w-full → single column stack
-         *
-         * Gap math (gap-6 = 24px):
-         *   3 cards: 3×(33.333%-16px) + 2×24px = 100% ✓
-         *   2 cards: 2×(50%-12px)     + 1×24px = 100% ✓
+         * CSS grid 3-2 layout:
+         *   - Parent: grid-cols-3 at lg, grid-cols-2 at sm, 1-col mobile
+         *   - First 3 cards sit directly in the parent grid (one per column)
+         *   - Last 2 cards are wrapped in a col-span-3 div so they span
+         *     the full row, then centred with max-w-2xl mx-auto in their
+         *     own 2-col sub-grid
+         *   - items-stretch (CSS grid default) gives equal height within
+         *     each row without any extra classes on the cards
          */}
-        <div className="mt-16 flex flex-wrap items-stretch justify-center gap-6">
-          {VALUES.map((v) => (
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          {/* Row 1: first 3 cards */}
+          {VALUES.slice(0, 3).map((v) => (
             <article
               key={v.title}
-              className="flex h-full w-full flex-col rounded-2xl bg-[#f5f5f7] p-7 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] lg:p-8"
+              className="flex flex-col rounded-2xl bg-[#f5f5f7] p-7 lg:p-8"
             >
-              {/* Icon */}
               <div className="mb-5 text-black">{v.icon}</div>
-
-              {/* Title */}
               <h3 className="mb-2 text-[1.0625rem] font-semibold leading-snug tracking-tight text-black">
                 {v.title}
               </h3>
-
-              {/* Description */}
               <p className="text-[0.9375rem] leading-relaxed text-[#6e6e73]">
                 {v.description}
               </p>
             </article>
           ))}
+
+          {/* Row 2: last 2 cards — span all 3 columns, sub-grid centred */}
+          <div className="col-span-1 sm:col-span-2 lg:col-span-3">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2">
+              {VALUES.slice(3).map((v) => (
+                <article
+                  key={v.title}
+                  className="flex flex-col rounded-2xl bg-[#f5f5f7] p-7 lg:p-8"
+                >
+                  <div className="mb-5 text-black">{v.icon}</div>
+                  <h3 className="mb-2 text-[1.0625rem] font-semibold leading-snug tracking-tight text-black">
+                    {v.title}
+                  </h3>
+                  <p className="text-[0.9375rem] leading-relaxed text-[#6e6e73]">
+                    {v.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+
         </div>
 
       </div>
