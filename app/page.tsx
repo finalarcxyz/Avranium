@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import ProjectTypes from '@/components/ProjectTypes'
 import ValueProps from '@/components/ValueProps'
 import BeforeAfter from '@/components/BeforeAfter'
+import Comparison from '@/components/Comparison'
 import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
 import About from '@/components/About'
@@ -17,6 +18,7 @@ export default function Home() {
         <ProjectTypes />
         <ValueProps />
         <BeforeAfter />
+        <Comparison />
         <HowItWorks />
         <Pricing />
         <About />
