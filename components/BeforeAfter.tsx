@@ -151,6 +151,7 @@ function ShowcaseRow({ showcase }: { showcase: Showcase }) {
 export default function BeforeAfter() {
   return (
     <section className="bg-white py-24">
+
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
 
         {/* ── Section header ──────────────────────────────────── */}

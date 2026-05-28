@@ -53,7 +53,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[4.5rem]">
-          Close more bookings, faster.
+          Close pre-construction bookings faster.
         </h1>
 
         {/* Subheadline */}

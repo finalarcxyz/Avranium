@@ -5,6 +5,7 @@ import ValueProps from '@/components/ValueProps'
 import BeforeAfter from '@/components/BeforeAfter'
 import Comparison from '@/components/Comparison'
 import HowItWorks from '@/components/HowItWorks'
+import OurWork from '@/components/OurWork'
 import Pricing from '@/components/Pricing'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <ProjectTypes />
         <ValueProps />
+        <OurWork />
         <BeforeAfter />
         <Comparison />
         <HowItWorks />
