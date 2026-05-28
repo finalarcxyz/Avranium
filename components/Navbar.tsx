@@ -1,10 +1,16 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 /* ── Constants ──────────────────────────────────────────────────── */
 const WA_HREF =
   'https://wa.me/919337925654?text=Hi%2C%20I%27m%20interested%20in%20a%203D%20walkthrough%20for%20my%20project'
+
+/* ── Nav links ──────────────────────────────────────────────────── */
+const NAV_LINKS = [
+  { href: '/contact', label: 'Contact' },
+]
 
 /* ── Component ──────────────────────────────────────────────────── */
 export default function Navbar() {
@@ -35,6 +41,19 @@ export default function Navbar() {
         <span className="select-none text-xl font-bold tracking-tight text-black">
           Avranium
         </span>
+
+        {/* ── Nav links ─────────────────────────────────────────── */}
+        <nav className="hidden sm:flex items-center gap-6">
+          {NAV_LINKS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-sm font-medium text-[#6e6e73] transition-colors duration-200 hover:text-black"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
 
         {/* ── WhatsApp CTA ───────────────────────────────────────── */}
         <a

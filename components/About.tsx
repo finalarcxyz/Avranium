@@ -1,7 +1,10 @@
 /* Server Component */
 
+import Image from 'next/image'
+
 type Person = {
-  initials: string
+  image: string
+  objectPosition: string
   name: string
   role: string
   bio: string
@@ -10,14 +13,16 @@ type Person = {
 
 const TEAM: Person[] = [
   {
-    initials: 'RS',
+    image: '/images/rajaram.png',
+    objectPosition: 'center top',
     name: 'Rajaram Swain',
     role: 'Growth & GTM',
     bio: 'From Web3 growth to immersive real estate experiences, Rajaram bridges the gap between great technical work and the clients who need it.',
     linkedinHref: 'https://linkedin.com/in/rajaram-swain',
   },
   {
-    initials: 'NS',
+    image: '/images/Nakul.jpeg',
+    objectPosition: 'center top',
     name: 'Nakul Saxena',
     role: 'Technical Founder',
     bio: 'Nakul brings game optimisation expertise into architectural visualisation, the rare skill that makes a 40 million polygon building run smoothly on any browser or VR headset.',
@@ -47,15 +52,16 @@ export default function About() {
               key={person.name}
               className="flex flex-col items-center rounded-2xl bg-[#f5f5f7] p-8 text-center"
             >
-              {/* Avatar placeholder */}
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full bg-[#1a1a1a]"
-                aria-hidden="true"
-              >
-                <span className="text-lg font-semibold tracking-wide text-white">
-                  {person.initials}
-                </span>
-              </div>
+              {/* Avatar */}
+              <Image
+                src={person.image}
+                alt={person.name}
+                width={160}
+                height={160}
+                className="mx-auto h-40 w-40 rounded-full object-cover"
+                style={{ objectPosition: person.objectPosition }}
+                unoptimized
+              />
 
               {/* Name */}
               <h3 className="mt-5 text-lg font-bold tracking-tight text-black">
