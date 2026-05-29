@@ -44,7 +44,7 @@ export default function Hero() {
 
       {/* ── Dark overlay (55 % black) ──────────────────────────────── */}
       <div
-        className="absolute inset-0 z-10 bg-black/55"
+        className="absolute inset-0 z-10 bg-black/70"
         aria-hidden="true"
       />
 
