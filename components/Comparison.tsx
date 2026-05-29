@@ -4,89 +4,25 @@ import { Check } from 'lucide-react'
 
 type Row = {
   label: string
-  render: string
   video: string
   avranium: string
-  /** Show a Check icon before the Avranium cell text */
   avraniumCheck?: boolean
 }
 
 /* ── Data ────────────────────────────────────────────────────────── */
 
 const ROWS: Row[] = [
-  {
-    label:    'Who controls it',
-    render:   'The creator',
-    video:    'The director',
-    avranium: 'The buyer',
-  },
-  {
-    label:    'What they see',
-    render:   'One fixed angle',
-    video:    'Fixed camera path',
-    avranium: 'Wherever they want to go',
-  },
-  {
-    label:    'Time spent',
-    render:   '3–5 seconds',
-    video:    'Length of video',
-    avranium: '15–20 minutes',
-  },
-  {
-    label:          'Feel',
-    render:         'Passive, they look',
-    video:          'Passive, they watch',
-    avranium:       'Active, they explore',
-    avraniumCheck:  true,
-  },
-  {
-    label:          'Shareable',
-    render:         'Image file',
-    video:          'Video file',
-    avranium:       'One link, opens instantly',
-    avraniumCheck:  true,
-  },
-  {
-    label:    'Device',
-    render:   'Any',
-    video:    'Any',
-    avranium: 'Phone, laptop, VR headset',
-  },
-  {
-    label:          'Revisit',
-    render:         'Look again',
-    video:          'Scrub through',
-    avranium:       'Walk through again anytime',
-    avraniumCheck:  true,
-  },
-  {
-    label:          'Buyer trust',
-    render:         'Must imagine the space',
-    video:          'Must imagine from one angle',
-    avranium:       'Has already experienced the space',
-    avraniumCheck:  true,
-  },
-  {
-    label:          'NRI / remote buyer',
-    render:         'Sees one image',
-    video:          'Watches a video',
-    avranium:       'Walks through from anywhere',
-    avraniumCheck:  true,
-  },
-  {
-    label:          'Post-delivery updates',
-    render:         'New render needed',
-    video:          'New video needed',
-    avranium:       'Update the scene',
-    avraniumCheck:  true,
-  },
-  {
-    label:          'Outcome',
-    render:         'Buyer imagines',
-    video:          'Buyer watches',
-    avranium:       'Buyer decides',
-    avraniumCheck:  true,
-  },
+  { label: 'Who controls it',     video: 'The director',             avranium: 'The buyer' },
+  { label: 'What they see',       video: 'Fixed camera path',        avranium: 'Wherever they want to go' },
+  { label: 'Time spent',          video: 'Length of video',          avranium: '15–20 minutes' },
+  { label: 'Feel',                video: 'Passive, they watch',      avranium: 'Active, they explore',                  avraniumCheck: true },
+  { label: 'Shareable',           video: 'Video file',               avranium: 'One link, opens instantly',             avraniumCheck: true },
+  { label: 'Device',              video: 'Any',                      avranium: 'Phone, laptop, VR headset' },
+  { label: 'Revisit',             video: 'Scrub through',            avranium: 'Walk through again anytime',            avraniumCheck: true },
+  { label: 'Buyer trust',         video: 'Must imagine from one angle', avranium: 'Has already experienced the space',  avraniumCheck: true },
+  { label: 'NRI / remote buyer',  video: 'Watches a video',          avranium: 'Walks through from anywhere',           avraniumCheck: true },
+  { label: 'Post-delivery updates', video: 'New video needed',       avranium: 'Update the scene',                      avraniumCheck: true },
+  { label: 'Outcome',             video: 'Buyer watches',            avranium: 'Buyer decides',                         avraniumCheck: true },
 ]
 
 /* ── Component ───────────────────────────────────────────────────── */
@@ -103,7 +39,7 @@ export default function Comparison() {
 
         {/* ── Headline ──────────────────────────────────────────── */}
         <h2 className="mx-auto mt-4 max-w-3xl text-center text-4xl font-bold tracking-tight text-black sm:text-5xl">
-          Not a render. Not a video. Something more useful.
+          Not a 3D video. Something more useful.
         </h2>
 
         {/* ── Subheadline ───────────────────────────────────────── */}
@@ -129,10 +65,6 @@ export default function Comparison() {
                 <th className="py-4 px-6" aria-label="Feature" />
 
                 <th className="py-4 px-6 text-left text-sm font-normal text-[#6e6e73]">
-                  Static 3D Render
-                </th>
-
-                <th className="py-4 px-6 text-left text-sm font-normal text-[#6e6e73]">
                   3D Video Walkthrough
                 </th>
 
@@ -155,11 +87,6 @@ export default function Comparison() {
                     {/* Row label */}
                     <td className={`py-4 px-6 text-sm font-medium text-black${rowBorder}`}>
                       {row.label}
-                    </td>
-
-                    {/* Static render cell */}
-                    <td className={`py-4 px-6 text-sm text-[#6e6e73]${rowBorder}`}>
-                      {row.render}
                     </td>
 
                     {/* Video walkthrough cell */}

@@ -13,7 +13,7 @@ type Person = {
 
 const TEAM: Person[] = [
   {
-    image: '/images/rajaram.png',
+    image: '/images/rajaram.jpeg',
     objectPosition: 'center top',
     name: 'Rajaram Swain',
     role: 'Growth & GTM',
