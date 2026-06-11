@@ -22,7 +22,7 @@ const SHOWCASES: Showcase[] = [
     image: '/images/Avranium_Exterior_render_Tapi.jpg',
     video: '/videos/Avranium_Exterior_3D_walkthrough_Demo_project-Tapi.mp4',
     links: [
-      { label: 'Explore Live →', href: 'https://pointzero.shapespark.com/tbs_e/' },
+      { label: 'Explore Live →', href: 'https://avranakul.shapespark.com/tapiexterior_multiplecamera/' },
     ],
   },
   {
@@ -30,7 +30,7 @@ const SHOWCASES: Showcase[] = [
     image: '/images/Avranium_foyer_3D_render_Tapi.jpg',
     video: '/videos/Avranium_Foyer_3D_walkthrough_Demo_project-Tapi.mp4',
     links: [
-      { label: 'Explore Live →', href: 'https://tapi.jrddesigning.com/foyer/' },
+      { label: 'Explore Live →', href: 'https://avranakul.shapespark.com/foyer/' },
     ],
   },
   {
@@ -38,8 +38,7 @@ const SHOWCASES: Showcase[] = [
     image: '/images/Avranium_Terrace_3D_render_Tapi.jpg',
     video: '/videos/Avranium_Terrace_night_3D_walkthrough_Demo_project-Tapi.mp4',
     links: [
-      { label: 'Day',   href: 'https://tapi.jrddesigning.com/tbw_terrace-1/' },
-      { label: 'Night', href: 'https://tapi.jrddesigning.com/tbw_terrace-night/' },
+      { label: 'Explore Live →', href: 'https://avranakul.shapespark.com/tbw_terrace-night/' },
     ],
   },
 ]
